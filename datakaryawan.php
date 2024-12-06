@@ -50,6 +50,47 @@ session_start();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- end script-->
+    <style>
+        .hamburger:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-mobile__list li {
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+
+        .navbar__list li:hover {
+            background-color: #f1f1f1;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-sidebar {
+            animation: fadeInLeft 0.8s ease-in-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body class="animsition">
@@ -62,16 +103,17 @@ session_start();
     }
 
  ?>
+    <body>
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
-        <header class="header-mobile d-block d-lg-none">
+        <header class="header-mobile d-block d-lg-none animate__animated animate__fadeInDown">
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
                             <img src="images/icon/logo.png" alt="CoolAdmin" />
                         </a>
-                        <button class="hamburger hamburger--slider" type="button">
+                        <button class="hamburger hamburger--slider animate__animated animate__pulse" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
                             </span>
@@ -81,144 +123,83 @@ session_start();
             </div>
             <nav class="navbar-mobile">
                 <div class="container-fluid">
-                   <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub animate__animated animate__fadeInLeft">
                             <a class="js-arrow" href="admin2.php">
                                 <i class="fas fa-tachometer-alt"></i>Beranda</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                
+                                <!-- Submenu -->
                             </ul>
                         </li>
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-1s">
                             <a href="datakaryawan.php">
                                 <i class="fas fa-chart-bar"></i>Data Karyawan</a>
                         </li>
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-2s">
                             <a href="datauser.php">
-                                <i class="fas fa-table"></i>Data user</a>
+                                <i class="fas fa-table"></i>Data User</a>
                         </li>
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-3s">
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-4s">
                             <a href="data_absen.php">
                                 <i class="fas fa-calendar-alt"></i>Data Absen</a>
                         </li>
-                       <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-5s">
                             <a href="data_keterangan.php">
-                                <i class="fas fa-table"></i>data Keterangan
-                            </a>
+                                <i class="fas fa-table"></i>Data Keterangan</a>
                         </li>
-                       
-                       
                     </ul>
                 </div>
             </nav>
         </header>
         <!-- END HEADER MOBILE-->
 
-        <!-- MENU SIDEBAR-->
+        <!-- MENU SIDEBAR -->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="#" class="animate__animated animate__fadeIn">
                     <h2>Admin</h2>
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft">
                             <a class="js-arrow" href="admin2.php">
                                 <i class="fas fa-tachometer-alt"></i>Beranda</a>
-                          
                         </li>
-                          <li class="active">
+                        <li class="active animate__animated animate__fadeInLeft animate__delay-1s">
                             <a href="datakaryawan.php">
                                 <i class="fas fa-chart-bar"></i>Data Karyawan</a>
                         </li>
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-2s">
                             <a href="datauser.php">
                                 <i class="fas fa-table"></i>Data User</a>
                         </li>
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-3s">
                             <a href="datajabatan.php">
                                 <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-4s">
                             <a href="data_absen.php">
                                 <i class="fas fa-calendar-alt"></i>Data Absen</a>
                         </li>
-                        <li>
+                        <li class="animate__animated animate__fadeInLeft animate__delay-5s">
                             <a href="data_keterangan.php">
                                 <i class="fas fa-map-marker-alt"></i>Data Keterangan</a>
                         </li>
-                        <!--<li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>Maps</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="button.html">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
-                                </li>
-                            </ul>
-                        </li>-->
-                        <li>
+                        <li class="animate__animated animate__fadeInRight">
                             <a href="logout.php">Logout</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </aside>
-        <!-- END MENU SIDEBAR-->
+        <!-- END MENU SIDEBAR -->
+    </div>
 
         <!-- PAGE CONTAINER-->
         <div class="page-container">
