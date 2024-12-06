@@ -148,26 +148,38 @@
 </head>
 <body>
   <!-- main -->
-  <div class="main-w3layouts wrapper animate__animated animate__fadeInUp">
-        <h1>Login Karyawan</h1>
-        <div class="main-agileinfo">
-            <div class="agileits-top">
-                <form action="pro_login_karyawan.php" method="post">
-                    <input class="text" type="text" name="username" placeholder="Username" required=""><br>
-                    <input class="text" type="password" name="password" placeholder="Password" required="">
-                    <input type="submit" value="Login">
-                </form>
-            </div>
-        </div>
-        <ul class="colorlib-bubbles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+  <div class="main-w3layouts wrapper">
+    <h1>Login Karyawan</h1>
+    <div class="main-agileinfo">
+      <div class="agileits-top">
+        <form action="pro_login_karyawan.php" method="post">
+          <input class="text" type="text" name="username" placeholder="Username" required=""><br>
+        
+          <input class="text" type="password" name="password" placeholder="Password" required="">
+          <div class="wthree-text">
+            <label class="anim">
+            </label>
+            <div class="clear"> </div>
+          </div>
+          <input type="submit" value="Login">
+        </form>
+        
+      </div>
     </div>
 
+    <ul class="colorlib-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
   <!-- //main -->
 </body>
 </html>
